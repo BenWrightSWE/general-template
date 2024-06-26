@@ -7,9 +7,10 @@
     <meta name="description" content="description of website or purpose.">
     <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=1">
     <meta name="robots" content="index,follow">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; font-src fonts.gstatic.com; style-src 'self' fonts.googleapis.com; img-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; font-src fonts.gstatic.com cdnjs.cloudflare.com; style-src 'self' fonts.googleapis.com cdnjs.cloudflare.com; img-src 'self'">
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <link rel="stylesheet" type="text/css" href="src/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Icon Library -->
     <script type="module" src="src/ts/main.ts"></script>
   </head>
   <body>
@@ -34,6 +35,26 @@
 
     </main>
     <footer>
+      <nav class="footer-site-nav">
+        <a href="">Home</a>
+        <a href="">Services</a>
+        <a href="">Pricing</a>
+        <a href="">About Us</a>
+        <button><a href="">Schedule</a></button>
+      </nav>
+      <aside>
+        <p>General Corporation<br>GeneralCorp@gmail.com<br>(123) 456-7890</p>
+      </aside>
+      <nav class="social-nav">
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-facebook"></a>
+      </nav>
+      <aside class="copyright">© 2024 BenWrightSWE<aside>
+      <nav class="legal-links">
+        <a href="">Terms of Use</a> | <a href="">Cookie and Privacy Policy</a>
+      </nav>
       <p class="hidden-symbols" id="hidden-closed-nav">&#9776;</p> <!-- Closed Nav, 9932 open -->
       <p class="hidden-symbols">&#9728;</p> <!-- Day Mode, 9790 night -->
     </footer>
