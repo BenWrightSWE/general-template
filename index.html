@@ -21,7 +21,7 @@
           <img src="public/images/default-icon.png" alt="default icon" class="mobile-header-img">
           <img src="public/images/default-logo.png" alt="default logo" class="desktop-header-img">
         </picture>
-        <button class="header-buttons night-mode-button">&#9728;</button>
+        <button class="header-buttons" id="night-mode-button"><span id="switch-up">&#9728;<br>&#9790;</span></button>
       </div>
       <nav id="header-nav">
         <a href="#">Home</a>
@@ -46,11 +46,13 @@
       </nav>
       <aside class="contact-us">
         <h3>Contact Us</h3>
-        <p>
-          General Corporation<br>
-          GeneralCorp@gmail.com<br>
-          (123) 456-7890
-        </p>
+        <div class="contact-us-info">
+          <p>General Corporation</p>
+          <span class="info-spacing"> | </span>
+          <p>GeneralCorp@gmail.com</p>
+          <span class="info-spacing"> | </span>
+          <p>(123) 456-7890</p>
+        </div>
       </aside>
       <nav class="social-nav">
         <a href="#" class="fa fa-linkedin"></a>

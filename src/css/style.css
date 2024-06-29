@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald');
 
+:root {
+    --bodyBackgroundColor: #EEE9E3;
+    --headerBackgroundColor: #C5A586;
+    --headerNavBackgroundColor: #E7D6C6;
+    --headerNavButtonColor: #D4D6D5;
+    --footerBackgroundColor: #474747;
+    --textColor: #474747;
+}
+
 *, *::before *::after {
     box-sizing: border-box;
 }
@@ -18,8 +27,10 @@ html {
 /* Mobile */
 
 body {
-    background-color: #EEE9E3;
+    background-color: var(--bodyBackgroundColor);
 }
+
+/* HEADER MOBILE */
 
 header {
     font-family: 'Oswald', sans-serif;
@@ -30,12 +41,14 @@ header {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 25%;
+        gap: 23%;
         padding: 2em;
-        background-color: #C5A586;
+        background-color: var(--headerBackgroundColor);
     }
 
     .header-buttons {
+        width: 2em;
+        max-height: 1.9em;
         background: none;
         border: none;
         padding: .1em .5em .2em .5em;
@@ -44,6 +57,19 @@ header {
 
     header picture {
         min-width: 5em;
+    }
+
+    #night-mode-button {
+        overflow: hidden;
+    }
+
+    #switch-up {
+        display: inline-block;
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -ms-transition: transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
     }
 
     .desktop-header-img {
@@ -56,7 +82,7 @@ header {
     }
 
     header nav {
-        background-color: #E7D6C6;
+        background-color: var(--headerNavBackgroundColor);
         display: none;
         flex-direction: column;
         padding: 4em;
@@ -66,29 +92,33 @@ header {
     header nav a {
         font-size: 4em;
         text-decoration: none;
-        color: #474747;
+        color: var(--textColor);
         margin-left: .75em;
     }
 
     header nav button {
         margin-top: 1em;
-        background-color: #D4D6D5;
+        background-color: var(--headerNavButtonColor);
         border-radius: 10px;
         box-shadow: 0 6px 8px #474747;
         font-family: 'Oswald', sans-serif;
     }
 
+/* MAIN MOBILE */
+
 main {
     min-height: 150em;
 }
 
+/* FOOTER MOBILE */
+
 footer {
-    background-color: #474747;
+    background-color: var(--footerBackgroundColor);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 2em 1em .5em 1em;
+    padding: 2em 0 .5em 0;
     margin-bottom: 0;
     font-family: 'Oswald', sans-serif;
 }
@@ -135,6 +165,20 @@ footer {
         text-align: center;
         font-size: 1.5em;
         color: #D4D6D5;
+        margin-bottom: 0;
+    }
+
+    .contact-us h3 {
+        text-decoration: underline;
+    }
+
+    .contact-us-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-spacing {
+        display: none;
     }
 
     .social-nav {
@@ -189,9 +233,11 @@ footer {
         display: none;
     }
 
-/* Mid Sized Phone 512px */
+/* LARGER MOBILE 512px */
 
 @media only screen and (min-width: 32em) {
+    /* HEADER LARGER MOBILE */
+
     .header-body {
         gap: 30%;
     }
@@ -199,6 +245,10 @@ footer {
     header picture {
         min-width: 6em;
     }
+
+    /* MAIN LARGER MOBILE */
+
+    /* FOOTER LARGER MOBILE */
 
     .footer-nav-links a {
         text-decoration: none;
@@ -219,7 +269,7 @@ footer {
     }
 
     .fa-facebook {
-        padding: 1.5em 1.6em 1.5em 1.6em;
+        padding: 1.5em 1.75em 1.5em 1.75em;
     }
 }
 
@@ -227,13 +277,159 @@ footer {
 
 @media only screen and (min-width: 48em) {
 
+    /* HEADER TABLET */
+
+    .header-body {
+        gap: 22%;
+    }
+
+    .mobile-header-img {
+        display: none;
+    }
+
+    .desktop-header-img {
+        display: block;
+    }
+
+    /* MAIN TABLET */
+
+
+    /* FOOTER TABLET */
+
+    footer {
+        padding: 3em 0 .5em 0;
+    }
+
+    footer * {
+        margin-bottom: 1em;
+    }
+
+    .contact-us {
+        font-size: 2em;
+    }
+
+    .contact-us h3 {
+        font-size: 1.2em;
+    }
+
+    .contact-us-info {
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .info-spacing {
+        display: block;
+    }
+
+    .copyright {
+        font-size: 1.4em;
+    }
+
+    .legal-links {
+        font-size: 1em;
+    }
 }
 
 /* Desktop 1024 */
 
 @media only screen and (min-width: 64em) {
 
+    /* HEADER DESKTOP */
+
+    .header-body {
+        gap: 30%;
+    }
+
+    header nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: .75em;
+    }
+
+    .header-buttons {
+        font-size: 4em;
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -ms-transition: transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
+    }
+
+    .header-buttons:hover {
+        transform: translateY(10%);
+    }
+
+    /*#switch-up {
+        display: inline-block;
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -ms-transition: transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
+    }*/
+
+    .header-buttons {
+        cursor: pointer;
+    }
+
+    header nav a:hover {
+        color: #d03f2c;
+        -webkit-transition: color 500ms linear;
+        -moz-transition: color 500ms linear;
+        -ms-transition: color 500ms linear;
+        -o-transition: color 500ms linear;
+        transition: color 500ms linear;
+    }
+
+    header nav button {
+        margin: 0;
+        padding: 1em 2.5em 1em 0;
+        font-size: 1em;
+        transition: transform 1s;
+    }
+
+    header nav button:hover {
+        transform: translateY(10%);
+    }
+
+    .footer-nav-links:hover {
+        color: #d03f2c;
+        -webkit-transition: color 500ms linear;
+        -moz-transition: color 500ms linear;
+        -ms-transition: color 500ms linear;
+        -o-transition: color 500ms linear;
+        transition: color 500ms linear;
+    }
+
+    .footer-nav-button {
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -ms-transition: transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
+    }
+
+    .footer-nav-button:hover {
+        transform: translateY(10%);
+    }
+
+    .fa {
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -ms-transition: transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
+    }
+
     .fa:hover {
+        transform: translateY(10%);
         opacity: 70%;
     }
+
+    /* MAIN DESKTOP */
+
+    /* FOOTER DESKTOP */
+
 }
