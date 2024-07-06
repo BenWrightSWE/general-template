@@ -93,6 +93,9 @@ header {
         font-size: 4em;
         text-decoration: none;
         color: var(--textColor);
+    }
+
+    .header-nav-links {
         margin-left: .75em;
     }
 
