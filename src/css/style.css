@@ -35,6 +35,8 @@ body {
 header {
     font-family: 'Oswald', sans-serif;
     width: 100%;
+    position: sticky;
+    top: 0;
 }
     .header-body {
         display: flex;
@@ -388,7 +390,7 @@ footer {
 
     header nav button {
         margin: 0;
-        padding: 1em 2.5em 1em 0;
+        padding: 1em 2.5em 1em 2.5em;
         font-size: 1em;
         transition: transform 1s;
     }
