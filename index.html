@@ -14,35 +14,35 @@
     <script type="module" src="src/ts/main.ts"></script>
   </head>
   <body>
-    <header>
-      <div class="header-body">
-        <button class="header-buttons" id="nav-button">&#9776;</button>
-        <picture>
-          <img src="public/images/default-icon.png" alt="default icon" class="mobile-header-img">
-          <img src="public/images/default-logo.png" alt="default logo" class="desktop-header-img">
-        </picture>
-        <button class="header-buttons" id="night-mode-button"><span id="switch-up">&#9728;<br>&#9790;</span></button>
-      </div>
-      <nav id="header-nav">
-        <a class="header-nav-links" href="#">Home</a>
-        <a class="header-nav-links" href="#">Services</a>
-        <a class="header-nav-links" href="#">Pricing</a>
-        <a class="header-nav-links" href="#">About Us</a>
-        <button><a href="#">Schedule</a></button>
-      </nav>
-    </header>
+  <header>
+    <section class="header-body">
+      <button class="header-buttons button-drop" id="nav-button">&#9776;</button>
+      <picture>
+        <img src="public/images/default-icon.png" alt="default icon" class="mobile-header-img">
+        <img src="public/images/default-logo.png" alt="default logo" class="desktop-header-img">
+      </picture>
+      <button class="header-buttons button-drop" id="night-mode-button"><span id="switch-up">&#9728;<br>&#9790;</span></button>
+    </section>
+    <nav id="header-nav">
+      <a class="header-nav-links color-change" href="index.html">Home</a>
+      <a class="header-nav-links color-change" href="#services">Services</a>
+      <a class="header-nav-links color-change" href="#pricing">Pricing</a>
+      <a class="header-nav-links color-change" href="#about-us">About Us</a>
+      <button class="button-drop"><a href="src/html/schedule-form.html">Schedule</a></button>
+    </nav>
+  </header>
     <main>
 
     </main>
     <footer>
       <nav class="footer-site-nav">
         <div class="footer-nav-links">
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Pricing</a>
-          <a href="#">About Us</a>
+          <a class="color-change" href="index.html">Home</a>
+          <a class="color-change" href="#services">Services</a>
+          <a class="color-change" href="#pricing">Pricing</a>
+          <a class="color-change" href="#about-us">About Us</a>
         </div>
-        <button class="footer-nav-button"><a href="">Schedule</a></button>
+        <button class="footer-nav-button button-drop"><a href="src/html/schedule-form.html">Schedule</a></button>
       </nav>
       <aside class="contact-us">
         <h3>Contact Us</h3>
@@ -55,15 +55,17 @@
         </div>
       </aside>
       <nav class="social-nav">
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-linkedin button-drop" ></a>
+        <a href="#" class="fa fa-instagram button-drop"></a>
+        <a href="#" class="fa fa-twitter button-drop"></a>
+        <a href="#" class="fa fa-facebook button-drop"></a>
       </nav>
-      <aside class="copyright">© 2024 BenWrightSWE<aside>
-      <nav class="legal-links">
-        <a href="">Terms of Use</a> | <a href="">Cookie and Privacy Policy</a>
-      </nav>
+      <aside class="copyright-legal">
+        <p>© 2024 BenWrightSWE</p>
+        <nav>
+          <a href="">Terms of Use</a> | <a href="">Cookie and Privacy Policy</a>
+        </nav>
+      </aside>
       <p class="hidden-symbols" id="hidden-closed-nav">&#9776;</p> <!-- Closed Nav, 9932 open -->
       <p class="hidden-symbols">&#9728;</p> <!-- Day Mode, 9790 night -->
     </footer>
